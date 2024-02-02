@@ -1,0 +1,14 @@
+# Original:
+https://github.com/Rudrabha/Wav2Lip
+# My fork:
+https://github.com/showgan/Wav2Lip
+
+python3 -m venv ~/python_virtual_envs/wav2lip
+alias python_wav2lip "source ~/python_virtual_envs/wav2lip/bin/activate.csh"
+python_wav2lip
+sudo apt install ffmpeg
+pip install -r requirements.txt
+
+
+python inference.py --checkpoint_path <input model pth fdile> --face <input video or image> --audio <input audio> --outfile <output video file> [--static STATIC]
+python inference.py --checkpoint_path models_downloaded/wav2lip.pth --face examples/joke3.mp4 --audio examples/joke1.mp3 --outfile results/Peygamber_p225_oldwoman7.mp4 --static STATIC
